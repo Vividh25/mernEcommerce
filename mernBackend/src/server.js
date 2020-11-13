@@ -6,7 +6,8 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
 //routes
-const userRoutes = require("./routes/user");
+const userRoutes = require("./routes/adminRoutes/user");
+const adminRoutes = require("./routes/adminRoutes/adminRoute");
 
 //environment variables
 env.config();
@@ -14,7 +15,8 @@ env.config();
 //mongodb connection
 mongoose
     .connect(
-        "mongodb+srv://admin:3QZHcHU9Y4dp7f9Y@cluster0.2z2cp.mongodb.net/ecommerce?retryWrites=true&w=majority",
+        // "mongodb+srv://admin:3QZHcHU9Y4dp7f9Y@cluster0.2z2cp.mongodb.net/ecommerce?retryWrites=true&w=majority",
+        `mongodb+srv://admin:${process.env.MONGO_DB_PASSWORD}@cluster0.2z2cp.mongodb.net/${process.env.MONGO_DB_DATABASE}?retryWrites=true&w=majority`,
         {
             useNewUrlParser: true,
             useUnifiedTopology: true,
@@ -33,6 +35,7 @@ app.use(
 );
 app.use(bodyParser.json());
 app.use("/api", userRoutes);
+app.use("/api", adminRoutes);
 
 //Listner
 app.listen(process.env.PORT, () => {
