@@ -1,0 +1,8 @@
+.admin__head{
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.admin__head > h1 {
+    font-weight: 300;
+}

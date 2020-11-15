@@ -1,0 +1,44 @@
+.signin__link{
+    text-decoration: none;
+    /* border: 1px solid #ffffff; */
+    /* padding: 5px; */
+    border-radius: 10px;
+    color: white;
+    margin-right: 15px;
+}
+
+.signin__link:hover{
+    text-decoration: none;
+    color:lightgray;
+}
+
+.signup__link{
+    text-decoration: none;
+    /* border: 1px solid #ffffff; */
+    /* padding: 5px; */
+    border-radius: 10px;
+    color: white;
+    margin-left: 15px;
+    margin-bottom: 2px;
+}
+
+.signup__link:hover{
+    text-decoration: none;
+    color:lightgray;
+}
+
+.navbar__head{
+    text-decoration: none;
+    /* border: 1px solid #ffffff; */
+    /* padding: 5px; */
+    border-radius: 10px;
+    color: white;
+    margin-right: 15px;
+    padding: 10px;
+    font-size: large;
+}
+
+.navbar__head:hover{
+    text-decoration: none;
+    color: lightgray;
+}
